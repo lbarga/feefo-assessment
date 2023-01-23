@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { STRINGS } from "../../constants/strings";
 import Space from "../space/space";
 import SupportContact from "../support-contact/support-contact";
 import {
@@ -7,10 +8,14 @@ import {
   AccountOverviewHeaderTitle,
 } from "./account-overview-header-styles";
 
+const { ACCOUNT_OVERVIEW } = STRINGS;
+
 export const AccountOverviewHeader = ({ supportContact }) => {
   return (
     <AccountOverviewHeaderContainer>
-      <AccountOverviewHeaderTitle>Account Overview</AccountOverviewHeaderTitle>
+      <AccountOverviewHeaderTitle tabIndex={0} aria-label={ACCOUNT_OVERVIEW}>
+        {ACCOUNT_OVERVIEW}
+      </AccountOverviewHeaderTitle>
       <Space width={80} />
       <SupportContact name={supportContact.name} email={supportContact.email} />
     </AccountOverviewHeaderContainer>
