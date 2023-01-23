@@ -1,4 +1,5 @@
 import AccountOverview from "./account-overview";
+import { AppContainer } from "./app-styles";
 import "./app.css";
 
 function App() {
@@ -17,9 +18,9 @@ function App() {
   };
 
   return (
-    <>
+    <AppContainer>
       <AccountOverview data={accountOverviewStub} />
-    </>
+    </AppContainer>
   );
 }
 
