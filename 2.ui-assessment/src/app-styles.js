@@ -5,7 +5,7 @@ const { greyA } = COLORS;
 
 export const AppContainer = styled.div`
   background-color: ${greyA};
-  min-height: 100vh;
+  min-height: 97.9vh;
   display: flex;
   flex-direction: column;
   align-items: center;
