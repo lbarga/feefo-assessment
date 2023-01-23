@@ -32,14 +32,3 @@ export const AccountOverviewContainer = styled.div`
     justify-content: flex-start;
   }
 `;
-
-// min-height: 100vh;
-//   align-items: flex-start;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   padding: 8px;
-
-//   @media (max-width: 768px) {
-//     align-items: center;
-//     justify-content: flex-start;
-//   }
