@@ -1,4 +1,4 @@
-# feefo-challenge
+# feefo-assessment
 
 1.[normalizer-assessment](https://github.com/lbarga/feefo-assessment/tree/master/1.normalizer-assessment)
 
