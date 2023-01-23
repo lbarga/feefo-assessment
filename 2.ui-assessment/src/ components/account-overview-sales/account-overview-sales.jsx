@@ -2,6 +2,7 @@ import { faInfoCircle, faUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import React from "react";
+import { ARIAS } from "../../constants/arias";
 import { COLORS } from "../../constants/colors";
 import { STRINGS } from "../../constants/strings";
 import { Line } from "../line/line";
@@ -19,8 +20,10 @@ import {
   AccountOverviewSalesUploadPercentageContainer,
 } from "./account-overview-sales-styles";
 
-const { YOU_HAD, UPLOADS, AND, LINES_ADD, UPLOAD_SUCCESS, LINES_SAVED } =
+const { YOU_HAD, UPLOADS, AND, LINES_ADD, UPLOAD_SUCCESS, LINES_SAVED, SALES } =
   STRINGS;
+
+const { SALES_AREA } = ARIAS;
 
 export const AccountOverviewSales = ({
   salesOverview: { successfulUploads, linesSaved, uploads, linesAttempted },
@@ -32,12 +35,13 @@ export const AccountOverviewSales = ({
           <AccountOverviewSalesLabelContainer>
             <FontAwesomeIcon icon={faUpload} color={COLORS.blueA} />
             <Space width={16} />
-            <AccountOverviewSalesLabel>Sales</AccountOverviewSalesLabel>
+            <AccountOverviewSalesLabel>{SALES}</AccountOverviewSalesLabel>
           </AccountOverviewSalesLabelContainer>
+          <div tabIndex={0} aria-label={SALES_AREA} />
           <FontAwesomeIcon icon={faInfoCircle} color={COLORS.greyD} />
         </AccountOverviewSalesHeaderContainer>
         <Space height={40} />
-        <AccountOverviewSalesPhraseContainer>
+        <AccountOverviewSalesPhraseContainer tabIndex={0}>
           {YOU_HAD}&nbsp;
           <b>
             {successfulUploads} {UPLOADS}

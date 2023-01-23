@@ -9,4 +9,5 @@ export const STRINGS = {
   SALES: "Sales",
   UPLOAD_SUCCESS: "UPLOAD SUCCESS",
   LINES_SAVED: "LINES SAVED",
+  ACCOUNT_OVERVIEW: "Account Overview",
 };

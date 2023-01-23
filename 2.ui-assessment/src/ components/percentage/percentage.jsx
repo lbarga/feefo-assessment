@@ -1,20 +1,31 @@
 import PropTypes from "prop-types";
+import { ARIAS } from "../../constants/arias";
 import {
   PercentageContainer,
   PercentageLabel,
   PercentageNumber,
 } from "./percentage-styles";
 
+const { YOUR, PERCENTAGE_IS } = ARIAS;
+
 const getPercentage = (value, total) => {
   return (value / total) * 100;
 };
 
 const Percentage = ({ value, total, label }) => {
+  const percentage = getPercentage(value, total);
+
   return (
-    <PercentageContainer>
-      <PercentageNumber>{`${getPercentage(value, total)}%`}</PercentageNumber>
-      <PercentageLabel>{label}</PercentageLabel>
-    </PercentageContainer>
+    <>
+      <div
+        tabIndex={0}
+        aria-label={`${YOUR}${label}${PERCENTAGE_IS}${percentage}%`}
+      />
+      <PercentageContainer>
+        <PercentageNumber>{`${percentage}%`}</PercentageNumber>
+        <PercentageLabel>{label}</PercentageLabel>
+      </PercentageContainer>
+    </>
   );
 };
 
